@@ -38,7 +38,7 @@ st.title("Multilingual Article Summarizer")
 
 # Load model and tokenizer
 model1 = MBartForConditionalGeneration.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
-tokenizer1 = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
+tokenizer1 = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-to-many-mmt",use_fast=False)
 
 def translate_text(text, src_lang, tgt_lang):
     tokenizer1.src_lang = src_lang
